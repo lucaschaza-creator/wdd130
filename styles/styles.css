@@ -19,8 +19,21 @@ body {
     font-family: Roboto, arial, sans-serif;
 }
 
-main {
+header,
+.grid,
+footer {
     max-width: 840px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+main {
+    margin: 1rem;
+    grid-column: 2 / 3;
 }
 
 img {
@@ -47,36 +60,47 @@ p {
 
 nav {
     background-color: var(--color-brand);
-    padding: 15px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 nav a {
     color: var(--color-light);
     display: block;
     padding: 20px;
+    text-decoration: none;
 }
 
 h1 {
     color: var(--color-brand);
     padding: .5rem;
+    border-bottom: var(--standard-border);
 }
 
 aside {
-    width: 550px;
+    width: 20rem;
+    height: auto;
     margin: 0;
     text-align: center;
     position: relative;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 aside img {
-    width: var(--location-image-width);
+    width: 100%;
+    max-width: var(--location-image-width);
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 aside h2 {
     position: absolute;
-    top: 40px;
-    left: 180px;
+    top: 35px;
+    left: 140px;
 }
 
 p {
@@ -84,7 +108,7 @@ p {
 }
 
 footer {
-    margin-top: 40px;
+    margin: 40px auto 0;
     border-top: var(--standard-border);
     text-align: center;
 }
